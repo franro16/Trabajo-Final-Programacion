@@ -6,12 +6,12 @@ import time
 
 def menu():
     print("******************************")
-    print("       ¡Bienvenido/a!")
+    print("        ¡Bienvenido/a!")
     print("******************************")
-    time.sleep(2)
-    print("Ingresa un numero para elegir un juego: ")
-    time.sleep(2)
-    print("1--- Adivina la Palabra            ---1")
+    time.sleep(1.5)
+    print("Ingresa un numero para elegir un juego")
+    time.sleep(1.5)
+    print("1---       Adivina la Palabra      ---1")
     print("2--- Tal juego                     ---2")
     print("3--- Tal juego                     ---3")
     print("4--- Tal juego                     ---4")
