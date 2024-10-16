@@ -8,7 +8,7 @@ def mostrar_tablero(palabra_oculta, intentos):
     print("************")
     print("Palabra:", " ".join(palabra_oculta))
     print("Intentos Restantes:", intentos, "  ", "♡" * intentos)
-    print("************")
+    print("*****************************")
 
 def adivinar_letra(palabra, palabra_oculta, letra):
     aciertos = 0
