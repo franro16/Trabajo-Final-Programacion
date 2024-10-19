@@ -2,7 +2,7 @@ from Juegos import juego1
 from Juegos import juego2
 from Juegos import juego3
 from Juegos import juego4
-import time
+import 
 
 def menu():
     while True:
