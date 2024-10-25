@@ -13,9 +13,9 @@ def menu():
         print("Ingresa un numero para elegir un juego")
         time.sleep(1.5)
         print("1---       Adivina la Palabra      ---1")
-        print("2--- Tal juego                     ---2")
-        print("3--- Tal juego                     ---3")
-        print("4--- Tal juego                     ---4")
+        print("2---       Trivia Matematica       ---2")
+        print("3---      Encuentra el Codigo      ---3")
+        print("4---         Preguntados           ---4")
         opcion = input("Que queres jugar?, Ingresa el numero: ")
 
         if opcion == "1":
@@ -23,15 +23,15 @@ def menu():
             time.sleep(2)
             juego1.juego_iniciado()
         elif opcion == "2":
-            print("---Elegiste Tal juego 2---")
+            print("---Elegiste Trivia Matematica---")
             time.sleep(2)
             juego2.juego_iniciado()
         elif opcion == "3":
-            print("---Elegiste Tal juego 3---")
+            print("---Elegiste Encuentra el Codigo---")
             time.sleep(2)
             juego3.juego_iniciado()
         elif opcion == "4":
-            print("---Elegiste Tal juego 4---")
+            print("---Elegiste Preguntados---")
             time.sleep(2)
             juego4.juego_iniciado()
         else:
