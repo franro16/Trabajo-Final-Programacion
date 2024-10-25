@@ -1,4 +1,5 @@
 import random
+import time
 def juego1():
     while True:
         
@@ -46,6 +47,7 @@ def juego1():
         jugar_de_nuevo = input("¿Desea volver a jugar? (si/no) ").lower()
         if jugar_de_nuevo != 'si':
             print("Gracias por jugar. ¡Hasta la proxima!")
+            time.sleep(2)
             break 
 
 def juego_iniciado():  

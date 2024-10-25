@@ -52,6 +52,7 @@ def juego3():
             jugar_otra_vez=input("¿Quieres volver a jugar?si/no): ").lower()
             if jugar_otra_vez!="si":
                 print ("gracias por jugar")
+                time.sleep(2)
                 break
 
     principal()

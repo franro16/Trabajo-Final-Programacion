@@ -1,2 +1,8 @@
-def juego_iniciado():
-    print("Este es el juego nro 4")
+def juego3():
+    print ("hola mundo")
+
+def juego_iniciado():  
+    juego3()
+
+if __name__ == "__main__":
+    juego_iniciado()  

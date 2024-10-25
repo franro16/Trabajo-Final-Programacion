@@ -1,4 +1,5 @@
 import random
+import time
 def juego2():
     preguntas={
         "facil": [("Cual es el resultado de (3*4)^(2) + 3^(2)+4^(2):", ["A. 171", "B. 169"], "B"),
@@ -85,6 +86,7 @@ def juego2():
             jugar_nuevamente= input("Quieres volver a jugar? (si/no):").lower()
             if jugar_nuevamente != 'si':
                 print("Gracias por jugar!")
+                time.sleep(2)
                 break
 
     jugar_trivia()
