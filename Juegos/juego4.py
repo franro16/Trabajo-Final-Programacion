@@ -14,6 +14,7 @@ categorias = {
         ("¿Cuál es la ciudad más poblada del hemisferio sur?", ["A. São Paulo", "B. Buenos Aires", "C. Johannesburgo", "D. Lima"], "A"),
         ("¿Qué país tiene la mayor cantidad de fronteras con otros países en Europa?", ["A. Alemania", "B. Francia", "C. Italia", "D. Suiza"], "A"),
     ],
+    
     "matematica": [
         ("¿Cuál es el resultado de (a^2 - b^2)?", ["A. (a - b)(a + b)", "B. x^2 + a^2", "C. a^2 + 2ab + b^2", "D. (a + b)(a - 2b)"], "A"),
         ("¿A qué es igual (x + a)^2?", ["A. x^2 + 2ax + a^2", "B. x^2 + a^2", "C. x^2 + ax + a^2", "D. x^2 + 2a + a^2"], "A"),
@@ -26,6 +27,7 @@ categorias = {
         ("¿Cuál es el resultado de (4^5) ÷ (4^3)?", ["A. 16", "B. 4", "C. 1", "D. 64"], "A"),
         ("¿Cuáles son los divisores de 9?", ["A. 1, 9", "B. 1, 3, 9", "C. 1, 3, 6", "D. 1, 9, 18"], "B"),
     ],
+
     "lengua": [
         ("¿Qué es un sustantivo?", ["A. Una acción", "B. Un nombre de persona, animal, cosa o lugar", "C. Una cualidad", "D. Una descripción"], "B"),
         ("¿Cuál es el antónimo de 'alegre'?", ["A. Feliz", "B. Triste", "C. Rápido", "D. Cansado"], "B"),
@@ -65,7 +67,6 @@ categorias = {
             
      ],
         
-
     "arte":
     [   ("¿Quién es el autor de la pintura 'Las Meninas'?", ["A. Francisco de Goya", "B. Diego Velázquez", "C. Pablo Picasso", "D. Salvador Dalí"], "B"),
             ("¿Qué artista colombiano es famoso por sus esculturas de figuras exageradamente grandes?", ["A. Diego Rivera", "B. Fernando Botero", "C. José Clemente Orozco", "D. David Alfaro Siqueiros"], "B"),
