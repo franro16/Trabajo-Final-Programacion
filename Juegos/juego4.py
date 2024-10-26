@@ -2,7 +2,7 @@ import random
 import time
 
 categorias = {
-    "Geografia": [
+    "geografia": [
         ("¿Cuál es el país más grande del mundo por superficie?", ["A. Rusia", "B. Canadá", "C. China", "D. Estados Unidos"], "A"),
         ("¿En qué continente se encuentra Egipto?", ["A. Asia", "B. África", "C. Europa", "D. América"], "B"),
         ("¿Qué océano separa América de Europa?", ["A. Atlántico", "B. Pacífico", "C. Índico", "D. Ártico"], "A"),
@@ -14,7 +14,7 @@ categorias = {
         ("¿Cuál es la ciudad más poblada del hemisferio sur?", ["A. São Paulo", "B. Buenos Aires", "C. Johannesburgo", "D. Lima"], "A"),
         ("¿Qué país tiene la mayor cantidad de fronteras con otros países en Europa?", ["A. Alemania", "B. Francia", "C. Italia", "D. Suiza"], "A"),
     ],
-    "Matematica": [
+    "matematica": [
         ("¿Cuál es el resultado de (a^2 - b^2)?", ["A. (a - b)(a + b)", "B. x^2 + a^2", "C. a^2 + 2ab + b^2", "D. (a + b)(a - 2b)"], "A"),
         ("¿A qué es igual (x + a)^2?", ["A. x^2 + 2ax + a^2", "B. x^2 + a^2", "C. x^2 + ax + a^2", "D. x^2 + 2a + a^2"], "A"),
         ("¿Cuál es el resultado de la suma fraccionaria 1/2 + 1/3?", ["A. 5/6", "B. 4/3", "C. 2/5", "D. 7/6"], "A"),
@@ -26,7 +26,7 @@ categorias = {
         ("¿Cuál es el resultado de (4^5) ÷ (4^3)?", ["A. 16", "B. 4", "C. 1", "D. 64"], "A"),
         ("¿Cuáles son los divisores de 9?", ["A. 1, 9", "B. 1, 3, 9", "C. 1, 3, 6", "D. 1, 9, 18"], "B"),
     ],
-    "Lengua": [
+    "lengua": [
         ("¿Qué es un sustantivo?", ["A. Una acción", "B. Un nombre de persona, animal, cosa o lugar", "C. Una cualidad", "D. Una descripción"], "B"),
         ("¿Cuál es el antónimo de 'alegre'?", ["A. Feliz", "B. Triste", "C. Rápido", "D. Cansado"], "B"),
         ("¿Qué es un adjetivo calificativo?", ["A. Describe una acción", "B. Describe una cualidad de un sustantivo", "C. Es un nombre propio", "D. Es una palabra invariable"], "B"),
@@ -38,7 +38,7 @@ categorias = {
         ("¿En qué género literario se clasifica una novela?", ["A. Lírico", "B. Dramático", "C. Narrativo", "D. Científico"], "C"),
         ("¿Qué es un hiato?", ["A. Unión de dos vocales", "B. Separación de dos vocales en sílabas diferentes", "C. Un grupo de consonantes", "D. Una vocal cerrada y una abierta juntas"], "B"),
     ],
-    "Ciencias": [
+    "ciencias": [
         ("¿Cuál es el planeta más cercano al Sol?", ["A. Venus", "B. Mercurio", "C. Tierra", "D. Marte"], "B"),
         ("¿Qué tipo de energía utiliza una planta para realizar la fotosíntesis?", ["A. Energía eólica", "B. Energía solar", "C. Energía geotérmica", "D. Energía hidráulica"], "B"),
         ("¿Cuál es el órgano responsable de bombear la sangre en el cuerpo humano?", ["A. Pulmón", "B. Hígado", "C. Corazón", "D. Riñón"], "C"),
@@ -51,7 +51,7 @@ categorias = {
         ("¿Qué sistema del cuerpo humano es responsable de regular las funciones internas?", ["A. Sistema circulatorio", "B. Sistema nervioso", "C. Sistema esquelético", "D. Sistema inmunológico"], "B"),
     ],
 
-    "Deporte":
+    "deporte":
     [   ("¿Quién es conocido como 'El Rey del Fútbol' en Brasil?", ["A. Pelé", "B. Maradona", "C. Ronaldinho", "D. Neymar"], "A"),
             ("¿Qué país ha ganado más Copas América?", ["A. Brasil", "B. Argentina", "C. Uruguay", "D. Chile"], "C"),
             ("¿Quién es el máximo goleador de la selección argentina de fútbol?", ["A. Gabriel Batistuta", "B. Diego Maradona", "C. Lionel Messi", "D. Sergio Agüero"], "C"),
@@ -66,7 +66,7 @@ categorias = {
      ],
         
 
-    "Arte":
+    "arte":
     [   ("¿Quién es el autor de la pintura 'Las Meninas'?", ["A. Francisco de Goya", "B. Diego Velázquez", "C. Pablo Picasso", "D. Salvador Dalí"], "B"),
             ("¿Qué artista colombiano es famoso por sus esculturas de figuras exageradamente grandes?", ["A. Diego Rivera", "B. Fernando Botero", "C. José Clemente Orozco", "D. David Alfaro Siqueiros"], "B"),
             ("¿En qué país nació Frida Kahlo?", ["A. Argentina", "B. México", "C. España", "D. Perú"], "B"),
@@ -87,7 +87,7 @@ def juego4():
         time.sleep(1)
         print("Seleccione una categoria:")
         time.sleep(1)
-        for categoria in categorias.keys():
+        for categoria in categorias:
             print(categoria)
 
         categoria_elegida = input("Selecciona la categoria que quieras jugar: ")
@@ -99,16 +99,19 @@ def juego4():
             puntuacion = 0
             for pregunta, opciones, respuesta_correcta in preguntas_elegidas:
                 print("\n" + pregunta)
+                time.sleep(1)
                 for opcion in opciones:
                     print(opcion)
 
-                respuesta_usuario = input("Elegi la correcta (A, B, C o D): ").strip().upper()
+                respuesta_usuario = input("Elegi la correcta (A, B, C o D): ").strip().upper() #El strip y el upper es para sacar espacios y que de igual si la respuesta es mayuscula o no
 
                 if respuesta_usuario == respuesta_correcta:
                     print("¡Correcto!")
                     puntuacion += 1
+                    time.sleep(1)
                 else:
                     print("Incorrecto. La respuesta correcta es: " + respuesta_correcta)
+                    time.sleep(1)
 
             print(f"\nTu puntuación final es: {puntuacion}/{len(preguntas_elegidas)}")
 
