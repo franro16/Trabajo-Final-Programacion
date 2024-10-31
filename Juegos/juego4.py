@@ -117,12 +117,13 @@ def juego4():
             print(f"\nTu puntuación final es: {puntuacion}/{len(preguntas_elegidas)}")
 
             jugar_otra_vez=input("¿Quieres volver a jugar?si/no): ")
-            if jugar_otra_vez!="si":
-                print ("Gracias por jugar preguntados!")
-                time.sleep(1)
+            if jugar_otra_vez=="si":
+                continue
+            elif jugar_otra_vez=="no":
                 break
-        else:
-            print("Ingresa una categoria que sea valida")
+            else:
+                print("Ingrese una repuesta correcta")
+        print("Ingresa una categoria que sea valida")
 
 def juego_iniciado():  
     juego4()

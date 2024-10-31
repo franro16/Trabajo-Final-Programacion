@@ -9,13 +9,14 @@ def menu():
         print("******************************")
         print("        ¡Bienvenido/a!")
         print("******************************")
-        time.sleep(1.5)
+        time.sleep(1.)
         print("Ingresa un numero para elegir un juego")
-        time.sleep(1.5)
+        time.sleep(1.)
         print("1---       Adivina la Palabra      ---1")
         print("2---       Trivia Matematica       ---2")
         print("3---      Encuentra el Codigo      ---3")
         print("4---         Preguntados           ---4")
+        
         opcion = input("Que queres jugar?, Ingresa el numero: ")
 
         if opcion == "1":
