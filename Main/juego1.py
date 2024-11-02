@@ -54,7 +54,7 @@ def juego1():
             #Esto es para saber si el jugador desea volver a jugar
 
 def juego_iniciado():  #Funcion para iniciar el juego
-    juego1() #Llama a la funcion juego1 para empezar 
+    juego1() #Llama a la funcion juego1 para empezar
 
 if __name__ == "__main__":
     juego_iniciado()  
