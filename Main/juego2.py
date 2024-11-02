@@ -1,5 +1,5 @@
 import random
-
+ 
 preguntas={
     "1": [("Cual es el resultado de (3*4)^(2) + 3^(2)+4^(2):", ["A. 171", "B. 169"], "B"),
               ("a^(2)-b^(2) a que es igual?:",["A. (a-b)(a+b)","B. x^(2)+a^(2)"],"A"),
@@ -54,7 +54,7 @@ preguntas={
     ],
 }
 
-def jugar_trivia():
+def juego2():
     while True:
         print("Bienvenido a la trivia matematica!!")
         print("Niveles de dificultad: 1. Facil 2. Medio 3. Dificil")
@@ -87,7 +87,11 @@ def jugar_trivia():
             print("Gracias por jugar!")
             break
 
-jugar_trivia()
+def juego_iniciado():  
+    juego2()
+
+if __name__ == "__main__":
+    juego_iniciado()  
 
 
    
