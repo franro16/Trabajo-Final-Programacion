@@ -1,7 +1,7 @@
-from Juegos import juego1
-from Juegos import juego2
-from Juegos import juego3
-from Juegos import juego4
+import juego1
+import juego2
+import juego3
+import juego4
 import time
 
 def menu():
@@ -20,23 +20,33 @@ def menu():
         opcion = input("Que queres jugar?, Ingresa el numero: ")
 
         if opcion == "1":
+            print("******************************")
             print("---Elegiste Adivina la palabra---")
+            print("******************************")
             time.sleep(2)
             juego1.juego_iniciado()
         elif opcion == "2":
+            print("******************************")
             print("---Elegiste Trivia Matematica---")
+            print("******************************")
             time.sleep(2)
             juego2.juego_iniciado()
         elif opcion == "3":
+            print("******************************")
             print("---Elegiste Encuentra el Codigo---")
+            print("******************************")
             time.sleep(2)
             juego3.juego_iniciado()
         elif opcion == "4":
+            print("******************************")
             print("---Elegiste Preguntados---")
+            print("******************************")
             time.sleep(2)
             juego4.juego_iniciado()
         else:
+            print("******************************")
             print("Opción no válida")
+            print("******************************")
 
 if __name__ == "__main__":
     menu()  
