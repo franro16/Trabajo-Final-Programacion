@@ -62,7 +62,7 @@ def juego2():
         dificultad= input("Seleccione un nivel de dificultad (escriba 1, 2 o 3)")
 
         if dificultad in preguntas:
-            print(f"Has seleccionado el nivel de dificultad {dificultad.capitalize()}. Suerte!!")
+            print(f"Has seleccionado el nivel de dificultad {dificultad}. Suerte!!")
             preguntas_dificultad= random.sample(preguntas[dificultad], min(5, len(preguntas[dificultad])))
             puntos=0
             for pregunta_seleccionada in preguntas_dificultad:
