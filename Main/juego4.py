@@ -90,7 +90,7 @@ def juego4():
         time.sleep(1)
         for categoria in categorias:
             print(categoria)
-
+#######################################################################################################################################
         categoria_elegida = input("Selecciona la categoria que quieras jugar: ")
 
         if categoria_elegida in categorias:
@@ -98,6 +98,7 @@ def juego4():
             preguntas_elegidas = random.sample(preguntas, min(10, len(preguntas)))
 
             puntuacion = 0
+########################################################################################################################################            
             for pregunta, opciones, respuesta_correcta in preguntas_elegidas:
                 print("\n" + pregunta)
                 time.sleep(1)
@@ -105,7 +106,7 @@ def juego4():
                     print(opcion)
 
                 respuesta_usuario = input("Elegi la correcta (A, B, C o D): ").strip().upper() #El strip y el upper es para sacar espacios y que de igual si la respuesta es mayuscula o no
-
+######################################################################################################################################## 
                 if respuesta_usuario == respuesta_correcta:
                     print("¡Correcto!")
                     puntuacion += 1
@@ -115,7 +116,7 @@ def juego4():
                     time.sleep(1)
 
             print(f"\nTu puntuación final es: {puntuacion}/{len(preguntas_elegidas)}")
-
+######################################################################################################################################## 
             jugar_otra_vez=input("¿Quieres volver a jugar?si/no): ")
             if jugar_otra_vez=="si":
                 continue
