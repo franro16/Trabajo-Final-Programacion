@@ -2,15 +2,15 @@ import random
 import time
 from operator import truediv
 
-def juego3():
-    def simulacion_desifrado(nivel):
+def juego3(): #función principal del juego
+    def simulacion_desifrado(nivel): #esta funcion se encarga del nivel del juego y aumenta la difucultad en cada nivel
         print(f"Descifra el codigo - Nivel {nivel}")
         digitos=nivel+2 #en cada nivel se le suman dos digitos, el nivel 1 tiene 3 digitos, el nivel 2 tiene 4 digitos
-        codigo=random.randint(10**(digitos-1),10**digitos-1)
+        codigo=random.randint(10**(digitos-1),10**digitos-1) #genera el coodigo 
         tiempo_inicio=time.time()
         print(f"Debes descifrar un codigo de {digitos} digitos")
         print(f"Los intentos son ilimitados")
-        while True:
+        while True: #bucle hasta que adivine el codigo
             intento=input(f"Introduce un codigo de {digitos} digitos: ")
             if not intento.isdigit()or len(intento) !=digitos:
                 print(f"cantidad de digitos incorrecta")
@@ -47,7 +47,7 @@ def juego3():
                 if exito:
                     print(f"completaste el nivel {nivel}, vamos al siguiente nivel")
                     nivel=nivel+1
-                if exito>3:
+                if nivel>3:
                     print("¡Completaste el juego!")
             jugar_otra_vez=input("¿Quieres volver a jugar?si/no): ").lower()
             if jugar_otra_vez!="si":
