@@ -2,7 +2,7 @@ import random
 import time
 
 def juego3(): #función principal del juego
-    def simulacion_desifrado(nivel): #esta funcion se encarga del nivel del juego y aumenta la difucultad en cada nivel
+    def simulacion_descifrado(nivel): #esta funcion se encarga del nivel del juego y aumenta la difucultad en cada nivel
         print(f"Descifra el codigo - Nivel {nivel}")
         digitos=nivel+2 #en cada nivel se le suman dos digitos, el nivel 1 tiene 3 digitos, el nivel 2 tiene 4 digitos
         codigo = str(random.randint(10**(digitos-1), 10**digitos-1)) #genera el coodigo 
@@ -41,7 +41,7 @@ def juego3(): #función principal del juego
             exito=True
             while exito and nivel<=3: #Bucle de niveles hasta completarlos
                 print(f"nivel {nivel}")
-                exito=simulacion_desifrado(nivel) #Inicia la simulación del nivel actual
+                exito=simulacion_descifrado(nivel) #Inicia la simulación del nivel actual
                 if exito:
                     print(f"completaste el nivel {nivel}")
                     nivel=nivel+1
