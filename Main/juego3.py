@@ -11,25 +11,26 @@ def juego3(): #función principal del juego
         print(f"Los intentos son ilimitados")
         while True: #bucle hasta que adivine el codigo
             intento=input(f"Introduce un codigo de {digitos} digitos: ")
-            if not intento.isdigit()or len(intento) !=digitos:
+            if not intento.isdigit()or len(intento) !=digitos: #Verifica que el intento tenga la longitud correcta
                 print(f"cantidad de digitos incorrecta")
                 continue
-            posicion_correcta = sum(1 for a, b in zip(intento, codigo) if a == b)
+                
+            posicion_correcta = sum(1 for a, b in zip(intento, codigo) if a == b) #cuenta los digitos en la posicion correcta
 
             
             codigo_restante = [c for i, c in enumerate(codigo) if intento[i] != c]
             intento_restante = [c for i, c in enumerate(intento) if intento[i] != codigo[i]]
 
-            
+            #cuenta los dígitos correctos en posición incorrecta
             digitos_correctos = 0
             for digito in intento_restante:
                 if digito in codigo_restante:
                     digitos_correctos += 1
-                    codigo_restante.remove(digito)
-            if intento==str(codigo):
+                    codigo_restante.remove(digito) 
+            if intento==str(codigo): # verifica si se adivino el codigo
                 tiempo_final=time.time()
                 print(f"¡Adivinaste el codigo en {round(tiempo_final-tiempo_inicio,2)} segundos!")
-                return True
+                return True #se avanza al siguente nivel
             else:
                 print(f"{posicion_correcta} digitos en la posicion correcta")
                 print(f"{digitos_correctos} digitos correctos pero en la posicion incorrecta")
@@ -38,9 +39,9 @@ def juego3(): #función principal del juego
         while True:
             nivel=1
             exito=True
-            while exito and nivel<=3:
+            while exito and nivel<=3: #Bucle de niveles hasta completarlos
                 print(f"nivel {nivel}")
-                exito=simulacion_desifrado(nivel)
+                exito=simulacion_desifrado(nivel) #Inicia la simulación del nivel actual
                 if exito:
                     print(f"completaste el nivel {nivel}")
                     nivel=nivel+1
@@ -50,7 +51,7 @@ def juego3(): #función principal del juego
             if jugar_otra_vez!="si":
                 print ("gracias por jugar")
                 time.sleep(2)
-                break
+                break #Termina el juego si no quiere volver a jugar
 
     principal()
 
