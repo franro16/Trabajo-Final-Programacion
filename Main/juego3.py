@@ -15,20 +15,18 @@ def juego3(): #función principal del juego
             if not intento.isdigit()or len(intento) !=digitos:
                 print(f"cantidad de digitos incorrecta")
                 continue
-            posicion_correcta=sum([1 for a,b in zip(intento,str(codigo)) if a==b])
-            codigo_lista=list(str(codigo))
-            intento_lista=list(intento)
+            posicion_correcta = sum(1 for a, b in zip(intento, codigo) if a == b)
 
-            digitos_correctos=0
-            for i in range(digitos):
-                if intento_lista[i]==codigo_lista[i]:
-                    codigo_lista[i]= None
-                    intento_lista[i]= None
-            digitos_correctos=0
-            for i in range(digitos):
-                if intento_lista[i] is not None and intento_lista[i] in codigo_lista:
-                    digitos_correctos=1
-                    codigo_lista[codigo_lista.index(intento_lista[i])]=None
+            
+            codigo_restante = [c for i, c in enumerate(codigo) if intento[i] != c]
+            intento_restante = [c for i, c in enumerate(intento) if intento[i] != codigo[i]]
+
+            
+            digitos_correctos = 0
+            for digito in intento_restante:
+                if digito in codigo_restante:
+                    digitos_correctos += 1
+                    codigo_restante.remove(digito)
             if intento==str(codigo):
                 tiempo_final=time.time()
                 print(f"¡Adivinaste el codigo en {round(tiempo_final-tiempo_inicio,2)} segundos!")
