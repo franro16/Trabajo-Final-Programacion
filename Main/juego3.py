@@ -42,7 +42,7 @@ def juego3(): #función principal del juego
                 print(f"nivel {nivel}")
                 exito=simulacion_desifrado(nivel)
                 if exito:
-                    print(f"completaste el nivel {nivel}, vamos al siguiente nivel")
+                    print(f"completaste el nivel {nivel}")
                     nivel=nivel+1
                 if nivel>3:
                     print("¡Completaste el juego!")
