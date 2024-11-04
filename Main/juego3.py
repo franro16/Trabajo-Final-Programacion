@@ -1,6 +1,5 @@
 import random
 import time
-from operator import truediv
 
 def juego3(): #función principal del juego
     def simulacion_desifrado(nivel): #esta funcion se encarga del nivel del juego y aumenta la difucultad en cada nivel
